@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attractive Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        h1 {
+            animation: slideIn 3s forwards;
+            opacity: 0;
+        }
+        p {
+            animation: slideIn 3s forwards;
+            opacity: 0;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .menu-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+        }
+        .menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            height: 100%;
+            left: 10px;
+            width: 40%;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 50
+        }
+        .menu-icon:hover + .menu {
+            display: block;
+        }
+        .get-started {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            animation: slideIn 2s forwards;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-icon">☰</div>
+    <div class="menu">
+        <p>Home</p>
+        <p>About</p>
+        <p>Contact</p>
+    </div>
+    <div class="container">
+        <h1>Welcome to LENDER-X studio</h1>
+        <p>Your journey begins here.</p>
+        <button class="get-started">Get Started</button>
+    </div>
+</body>
+</html>
